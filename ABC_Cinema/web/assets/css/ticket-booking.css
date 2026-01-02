@@ -1,0 +1,530 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+html {
+
+	height: 100%
+}
+
+h2 {
+	color: white;
+	font-size: 1.7rem;
+	margin-bottom: 20px;
+}
+
+/* custom css */
+
+#progress-container-id {
+	width: 100%;
+}
+
+#form {
+	text-align: center;
+	position: relative;
+	margin-top: 20px
+}
+
+#form fieldset {
+	background: var(--theme-bg);
+	border: 0 none;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding-bottom: 20px;
+	position: relative
+}
+
+.finish {
+	text-align: center
+}
+
+#form fieldset:not(:first-of-type) {
+	display: none
+}
+
+#form .previous-step,
+.next-step {
+	width: min-content;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 0px;
+	cursor: pointer;
+	font-size: 0.8rem;
+	padding: 10px 35px;
+	margin: 10px 5px 10px 0px;
+	float: right;
+	border-radius: 22px;
+}
+
+.form,
+.previous-step {
+	background: #16130a;
+        color: #5cb85c;
+}
+
+.form,
+.next-step {
+	margin-left: 20px;
+	margin-right: 20px;
+	background: #16130a;
+}
+
+#form .previous-step:hover,
+#form .previous-step:focus {
+	background-color: #FF0000;
+	color: white;
+}
+
+#form .next-step:hover,
+#form .next-step:focus {
+	background-color: #fece25;
+        color: #16130a;
+}
+
+#form .next-step:disabled {
+       color: white;
+	background-color: #16130a;
+}
+
+.text {
+	color: #fff;
+	font-weight: normal
+}
+
+#progressbar {
+	margin-top: 45px;
+	;
+	margin-bottom: 15px;
+	overflow: hidden;
+	color: var(--theme-progressbar);
+}
+
+#progressbar .active {
+	color: var(--theme-green);
+}
+
+#progressbar li {
+	list-style-type: none;
+	font-size: 15px;
+	width: 25%;
+	float: left;
+	position: relative;
+	font-weight: 400;
+}
+
+#progressbar #step1:before {
+	content: "1"
+}
+
+#progressbar #step2:before {
+	content: "2"
+}
+
+#progressbar #step3:before {
+	content: "3"
+}
+
+#progressbar #step4:before {
+	content: "4"
+}
+
+#progressbar li:before {
+	width: 50px;
+	height: 50px;
+	line-height: 45px;
+	display: block;
+	font-size: 20px;
+	color: #ffffff;
+	background: lightgray;
+	border-radius: 50%;
+	margin: 0 auto 10px auto;
+	padding: 2px
+}
+
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: var(--theme-progressbar);
+	position: absolute;
+	left: 0;
+	top: 25px;
+	z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+	background: #ffce26;
+}
+
+.progress {
+	height: 20px
+}
+
+.progress-bar {
+	background-color: #ffce26;
+}
+
+.fa-user-circle-o {
+	font-size: 2rem;
+	display: inline-block;
+	position: relative;
+	color: #ffce26;
+}
+
+.cancel-pay-btn {
+	width: min-content;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 0px;
+	cursor: pointer;
+	font-size: 0.8rem;
+	padding: 10px 35px;
+	margin: 10px 5px 10px 0px;
+	float: right;
+	border-radius: 22px;
+	background: #16130a;
+}
+
+.pay-btn {
+	margin-left: 20px;
+	margin-right: 20px;
+	background: #16130a;
+}
+
+.home-page-btn {
+	width: min-content;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 0px;
+	cursor: pointer;
+	font-size: 0.8rem;
+	padding: 10px 35px;
+	margin: 10px 5px 10px 0px;
+	float: right;
+	border-radius: 22px;
+	background: #ffce26;
+	background: #616161; 
+}
+
+/* external css: flickity.css */
+
+#screen-select-div>* {
+  box-sizing: border-box;
+}
+
+/* body { font-family: sans-serif;
+  margin-left: 120px;
+  margin-right: 120px;
+} */
+
+.carousel {
+  background: white;
+  margin-bottom: 40px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  background: #16130a;
+  border-radius: 5px;
+  cursor: pointer;
+  /* vertical-align: middle; */
+  display: inline-block;
+  /* justify-content: center;
+    flex-wrap: wrap; */
+  /* counter-increment: carousel-cell; */
+}
+
+/* .my-div {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+} */
+
+
+/* .my-div:active{
+  background-color:#f00;
+} */
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: black;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+}
+
+.carousel-nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel-nav .carousel-cell:focus {
+  background: #ffce26;
+}
+
+.carousel-nav .carousel-cell.is-selected {
+  background: #ffce26;
+}
+
+.carousel-nav .carousel-cell .date-numeric {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 20%;
+}
+
+.carousel-nav .carousel-cell .date-day {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 14px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.screens {
+  display: block;
+  /* padding: 10px; */
+  margin-bottom: 10px;
+  text-align: left;
+  color: var(--theme-title);
+  /* float: left; */
+}
+
+.screen-time {
+  background-color: #16130a;
+  border: none;
+  color: #5cb85c;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  margin-right: 20px;
+  float: left;
+}
+
+/* .time-btn{
+  float: left;
+} */
+ul.time-ul {
+  list-style-type: none;
+  display: table;
+}
+
+li.time-li {
+  margin-bottom: 25px;
+  display: table;
+  /* display: inline-block; */
+}
+
+.screen-time:focus {
+  background-color: #16130a;
+}
+
+.flickity-viewport {
+  background-color: var(--theme-bg);
+}
+
+/*payment*/
+/* body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+} */
+
+#payment_div>* {
+  box-sizing: border-box;
+}
+
+.payment-row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.payment-container {
+  background-color: var(--theme-bg);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  /* box-shadow: 0 14px 28px var(--theme-border), 
+			0 10px 10px var(--theme-border); */
+
+}
+
+#payment-h3 {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* For payment Method */
+.payment-row.payment {
+  margin-top: 25px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.col-50.payment {
+  float: right;
+  padding-left: 70px;
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+  height: 122px;
+  padding-top: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background-color: #eeeced;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logos {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.radio-input {
+  margin-top: 20px;
+  color: black;
+}
+
+input[type='radio'] {
+  display: inline-block;
+}
+
+/* Payment ends */
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: var(--theme-para);
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  color: var(--theme-title);
+  float: left;
+}
+
+.icon-container {
+  font-size: 24px;
+}
+
+.btn {
+  /* background-color: #4CAF50; */
+  color: var(--theme-white);
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+a {
+  color: #2196F3;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of method to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .payment-row {
+    flex-direction: column;
+  }
+
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}.w3l-header {
+
+}
+
+
+#form .cancel-pay-btn:hover, 
+#form .cancel-pay-btn:focus { 
+	background-color: #FF0000;
+} 
+
+#form .pay-btn:hover, 
+#form .pay-btn:focus { 
+	background: #fece25; 
+} 
+
+#form .home-page-btn:hover, 
+#form .home-page-btn:focus { 
+	background-color: #c70050;
+}.px-lg-0 {
+
+}
